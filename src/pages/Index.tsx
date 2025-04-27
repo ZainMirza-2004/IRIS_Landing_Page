@@ -16,13 +16,13 @@ const Index = () => {
         {/* Core Visual Representation */}
         <CoreVisual />
         
-        {/* Value Proposition & Features */}
+        {/* Value Proposition & Features Grid */}
         <div className="grid grid-cols-2 gap-10 mb-10">
           <ValueProposition />
           <FeaturesGrid />
         </div>
         
-        {/* Technical Architecture & Data Flow - Shorter version */}
+        {/* Technical Architecture & Data Flow */}
         <TechnicalDeepDive />
         
         {/* Implementation Results */}
