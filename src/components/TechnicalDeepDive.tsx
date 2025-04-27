@@ -1,13 +1,12 @@
-
 const TechnicalDeepDive = () => {
   return (
-    <div className="mb-8">
-      <h3 className="text-2xl md:text-[32pt] font-bold mb-6 inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
+    <div className="space-y-8">
+      <h3 className="text-2xl md:text-[32pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
         System Architecture & Data Flow
       </h3>
       
-      <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-        <div className="flex items-center justify-between mb-8 relative">
+      <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-8 border border-white/10 space-y-8">
+        <div className="flex items-center justify-between relative">
           {/* Connecting lines */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-poster-teal via-poster-blue to-poster-teal opacity-20 transform -translate-y-1/2 z-0"></div>
           
@@ -124,32 +123,34 @@ const TechnicalDeepDive = () => {
           </div>
         </div>
         
-        <div className="mt-8">
-          <h4 className="text-lg text-poster-white font-medium mb-4">Application of Course Concepts</h4>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
-              <h5 className="text-poster-teal text-sm font-medium mb-2">CSE3015 (IoT Systems)</h5>
-              <p className="text-xs text-poster-white/80">Applied concepts include sensor fusion, edge computing, power efficiency protocols, and embedded systems programming for real-time processing.</p>
-            </div>
-            <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
-              <h5 className="text-poster-teal text-sm font-medium mb-2">CSE3050 (Security)</h5>
-              <p className="text-xs text-poster-white/80">Implemented multi-layer security using AES encryption, secure boot, certificate-based authentication, and MFA for user access control.</p>
-            </div>
-            <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
-              <h5 className="text-poster-teal text-sm font-medium mb-2">CSE2010 (Networks)</h5>
-              <p className="text-xs text-poster-white/80">Utilized BLE for low-power edge communications, Wi-Fi for fog layer, and MQTT protocol for efficient cloud messaging with QoS guarantees.</p>
+        <div className="space-y-6">
+          <div className="mt-8 space-y-4">
+            <h4 className="text-lg text-poster-white font-medium">Application of Course Concepts</h4>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
+                <h5 className="text-poster-teal text-sm font-medium mb-2">CSE3015 (IoT Systems)</h5>
+                <p className="text-xs text-poster-white/80">Applied concepts include sensor fusion, edge computing, power efficiency protocols, and embedded systems programming for real-time processing.</p>
+              </div>
+              <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
+                <h5 className="text-poster-teal text-sm font-medium mb-2">CSE3050 (Security)</h5>
+                <p className="text-xs text-poster-white/80">Implemented multi-layer security using AES encryption, secure boot, certificate-based authentication, and MFA for user access control.</p>
+              </div>
+              <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
+                <h5 className="text-poster-teal text-sm font-medium mb-2">CSE2010 (Networks)</h5>
+                <p className="text-xs text-poster-white/80">Utilized BLE for low-power edge communications, Wi-Fi for fog layer, and MQTT protocol for efficient cloud messaging with QoS guarantees.</p>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div className="mt-6 p-4 rounded-lg bg-gradient-to-r from-poster-teal/10 to-poster-blue/10 border border-poster-teal/20">
-          <h4 className="text-sm text-poster-teal font-medium mb-2">Critical Design Decisions</h4>
-          <ul className="text-xs text-poster-white/80 space-y-1">
-            <li>• Edge processing for sensitive data minimizes cloud exposure and reduces latency</li>
-            <li>• Multi-layered security approach with different encryption levels based on data sensitivity</li>
-            <li>• Modular architecture allows for component upgrades without total system replacement</li>
-            <li>• Human-centered design prioritizes intuitive controls and meaningful alerts</li>
-          </ul>
+          
+          <div className="mt-8 space-y-4">
+            <h4 className="text-lg text-poster-white font-medium">Critical Design Decisions</h4>
+            <ul className="text-xs text-poster-white/80 space-y-2">
+              <li>• Edge processing for sensitive data minimizes cloud exposure and reduces latency</li>
+              <li>• Multi-layered security approach with different encryption levels based on data sensitivity</li>
+              <li>• Modular architecture allows for component upgrades without total system replacement</li>
+              <li>• Human-centered design prioritizes intuitive controls and meaningful alerts</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

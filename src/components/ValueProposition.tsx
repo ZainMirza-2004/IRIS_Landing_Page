@@ -1,15 +1,14 @@
-
 import { ArrowRightIcon, CheckIcon } from "lucide-react";
 
 const ValueProposition = () => {
   return (
-    <div className="mb-8">
+    <div className="space-y-6">
       <h3 className="text-2xl md:text-[32pt] font-bold mb-6 inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
         Why I.R.I.S.?
       </h3>
       
       <div className="mb-6">
-        <p className="text-lg md:text-xl text-poster-white/85 mb-4 leading-relaxed">
+        <p className="text-lg md:text-xl text-poster-white/85 leading-relaxed">
           The Intelligent, Responsive IoT Security System (I.R.I.S.) is a modular security solution that leverages edge computing, 
           machine learning, and encrypted communications to provide comprehensive protection for homes and businesses.
         </p>
@@ -17,7 +16,7 @@ const ValueProposition = () => {
       
       <h4 className="text-xl text-poster-teal mb-4 font-medium">Core System Benefits:</h4>
       
-      <ul className="space-y-5 text-xl md:text-[22pt] text-poster-white">
+      <ul className="space-y-6 text-xl md:text-[22pt] text-poster-white">
         <li className="flex items-start group transition-all duration-300 hover:translate-x-2">
           <span className="mr-4 text-3xl mt-0.5 group-hover:scale-110 transition-transform duration-300 bg-poster-teal/10 rounded-full p-1">📦</span>
           <div>
@@ -69,10 +68,10 @@ const ValueProposition = () => {
         </li>
       </ul>
       
-      <div className="mt-6 p-4 rounded-xl bg-poster-teal/5 border border-poster-teal/20 backdrop-blur-sm">
-        <div className="flex items-center">
-          <div className="mr-3 bg-poster-teal rounded-full p-1">
-            <CheckIcon className="w-4 h-4 text-poster-background" />
+      <div className="mt-8 p-4 rounded-xl bg-poster-teal/5 border border-poster-teal/20 backdrop-blur-sm">
+        <div className="flex items-center space-x-3">
+          <div className="bg-poster-teal rounded-full p-2">
+            <CheckIcon className="w-5 h-5 text-poster-background" />
           </div>
           <p className="text-sm text-poster-white/80">
             <span className="text-poster-teal font-medium">Human-Centered Design:</span> Intuitive interfaces with accessibility features and flexible notification settings

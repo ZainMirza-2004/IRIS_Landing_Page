@@ -1,12 +1,11 @@
-
 const VisualAssets = () => {
   return (
-    <div className="mb-8">
-      <h3 className="text-2xl md:text-[28pt] font-bold mb-6 inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
+    <div className="space-y-8">
+      <h3 className="text-2xl md:text-[28pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
         Implementation Results
       </h3>
       
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-3 gap-10">
         {/* Prototype Showcase */}
         <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-poster-teal/30 transition-all duration-300">
           <h4 className="text-poster-white text-lg font-medium mb-3 flex items-center">

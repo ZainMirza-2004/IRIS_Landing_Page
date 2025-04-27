@@ -1,10 +1,9 @@
-
 import { cn } from "@/lib/utils";
 import { ShieldCheck } from "lucide-react";
 
-const PosterHeader = () => {
+const PosterHeader = ({ className }: { className?: string }) => {
   return (
-    <div className="w-full flex flex-col items-center mb-12">
+    <div className={cn("w-full flex flex-col items-center space-y-8", className)}>
       <div className="flex justify-between items-start w-full">
         <div className="flex-1">
           <div className="flex items-center space-x-2 mb-3">

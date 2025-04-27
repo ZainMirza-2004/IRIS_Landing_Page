@@ -126,12 +126,12 @@ const FeaturesGrid = () => {
   ];
 
   return (
-    <div className="mb-8">
+    <div className="space-y-8">
       <h3 className="text-2xl md:text-[32pt] font-bold mb-8 inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
         Engineered for Intelligence
       </h3>
       
-      <div className="grid grid-cols-5 gap-6 relative">
+      <div className="grid grid-cols-5 gap-8 relative">
         {features.map((feature, index) => (
           <FeatureCard 
             key={index}
@@ -145,7 +145,7 @@ const FeaturesGrid = () => {
         ))}
       </div>
       
-      <div className="mt-8 text-xs text-poster-white/50 italic text-right">
+      <div className="text-xs text-poster-white/50 italic text-right">
         <p>Hover over features to view implementation details</p>
       </div>
     </div>

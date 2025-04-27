@@ -1,4 +1,3 @@
-
 import PosterHeader from "@/components/PosterHeader";
 import CoreVisual from "@/components/CoreVisual";
 import ValueProposition from "@/components/ValueProposition";
@@ -8,28 +7,28 @@ import VisualAssets from "@/components/VisualAssets";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-poster-background p-4 md:p-8">
-      <div className="poster-container w-full max-w-7xl aspect-[1/1.414] overflow-auto p-8 border border-poster-spacegray/20 shadow-xl shadow-black/20 rounded-sm">
+    <div className="min-h-screen flex items-center justify-center bg-poster-background p-6 md:p-10">
+      <div className="poster-container w-full max-w-7xl aspect-[1/1.414] overflow-auto p-10 border border-poster-spacegray/20 shadow-xl shadow-black/20 rounded-lg">
         {/* Project Title & Description */}
-        <PosterHeader />
+        <PosterHeader className="mb-12" />
         
         {/* Core Visual Representation */}
-        <CoreVisual />
+        <CoreVisual className="mb-12" />
         
         {/* Value Proposition & Features Grid */}
-        <div className="grid grid-cols-2 gap-10 mb-10">
+        <div className="grid grid-cols-2 gap-12 mb-12">
           <ValueProposition />
           <FeaturesGrid />
         </div>
         
         {/* Technical Architecture & Data Flow */}
-        <TechnicalDeepDive />
+        <TechnicalDeepDive className="mb-12" />
         
         {/* Implementation Results */}
         <VisualAssets />
         
         {/* Footer with additional information */}
-        <div className="mt-10 pt-6 border-t border-poster-spacegray/20 flex justify-between items-center">
+        <div className="mt-12 pt-8 border-t border-poster-spacegray/20 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-r from-poster-teal to-poster-blue flex items-center justify-center">
               <span className="text-white font-bold">IR</span>
