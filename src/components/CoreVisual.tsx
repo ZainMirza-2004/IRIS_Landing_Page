@@ -1,6 +1,5 @@
 
 import { Box, Cloud, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const CoreVisual = () => {
   return (
@@ -51,17 +50,14 @@ const CoreVisual = () => {
           <path 
             className="data-flow-line" 
             d="M300,200 C350,150 450,150 500,200" 
-            strokeDasharray="5,5"
           />
           <path 
             className="data-flow-line" 
-            d="M300,210 C350,260 450,260 500,210" 
-            strokeDasharray="5,5"
+            d="M300,210 C350,260 450,260 500,210"
           />
           <path 
             className="data-flow-line" 
-            d="M400,300 C400,250 400,250 400,200" 
-            strokeDasharray="5,5"
+            d="M400,300 C400,250 400,250 400,200"
           />
         </svg>
 

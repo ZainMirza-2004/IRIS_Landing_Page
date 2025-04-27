@@ -1,5 +1,5 @@
 
-import { Moon, Box, Bell, Shield, iPhone, Fingerprint, Cloud, Rain, Nodes } from "lucide-react";
+import { Moon, Package, Bell, Shield, Smartphone, Fingerprint, Cloud, Droplets, Network } from "lucide-react";
 
 type FeatureCardProps = {
   icon: React.ReactNode;
@@ -23,16 +23,16 @@ const FeatureCard = ({ icon, title, detail }: FeatureCardProps) => {
 
 const FeaturesGrid = () => {
   const features = [
-    { icon: <Nodes size={24} />, title: "Motion Detection", detail: "99% accuracy" },
+    { icon: <Network size={24} />, title: "Motion Detection", detail: "99% accuracy" },
     { icon: <Fingerprint size={24} />, title: "Smart Lock", detail: "TLS 1.3 encryption" },
     { icon: <Cloud size={24} />, title: "Cloud Storage", detail: "AES-256" },
     { icon: <Moon size={24} />, title: "Night Vision", detail: "4K IR camera" },
-    { icon: <Box size={24} />, title: "Package Alerts", detail: "TensorFlow Lite AI" },
+    { icon: <Package size={24} />, title: "Package Alerts", detail: "TensorFlow Lite AI" },
     { icon: <Bell size={24} />, title: "Real-Time Alerts", detail: "<3s latency" },
     { icon: <Shield size={24} />, title: "Breach Detection", detail: "MFA" },
-    { icon: <iPhone size={24} />, title: "Companion App", detail: "SwiftUI" },
-    { icon: <Rain size={24} />, title: "Weatherproof", detail: "IP65 rating" },
-    { icon: <Nodes size={24} />, title: "Scalable", detail: "Plug-and-play" }
+    { icon: <Smartphone size={24} />, title: "Companion App", detail: "SwiftUI" },
+    { icon: <Droplets size={24} />, title: "Weatherproof", detail: "IP65 rating" },
+    { icon: <Network size={24} />, title: "Scalable", detail: "Plug-and-play" }
   ];
 
   return (

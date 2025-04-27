@@ -63,6 +63,12 @@ export default {
           darkgray: '#333333'
         }
       },
+      strokeWidth: {
+        '1.5': '1.5px',
+      },
+      strokeDasharray: {
+        '2': '2',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -97,5 +103,15 @@ export default {
       }
     }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.stroke-dasharray-2': {
+          'stroke-dasharray': '2'
+        }
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 } satisfies Config;

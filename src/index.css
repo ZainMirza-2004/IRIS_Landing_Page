@@ -88,8 +88,9 @@
   
   /* Data flow lines */
   .data-flow-line {
-    @apply stroke-poster-blue stroke-dasharray-2 animate-data-flow;
+    @apply stroke-poster-blue animate-data-flow;
     stroke-width: 1.5;
+    stroke-dasharray: 2;
     fill: none;
   }
 }
