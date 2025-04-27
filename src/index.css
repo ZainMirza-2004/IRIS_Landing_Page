@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -57,36 +56,30 @@
     padding: 0;
   }
 
-  /* A1 poster aspect ratio - 594mm × 841mm which is 1:1.414 */
   .poster-container {
-    @apply w-full h-full bg-poster-background;
+    @apply w-full h-full bg-poster-background bg-[radial-gradient(circle_at_center,rgba(46,196,182,0.08),transparent_25%)];
   }
   
-  /* For bold headers like the title */
   .header-bold {
     @apply font-bold tracking-tight;
   }
   
-  /* For light text like the subtitle */
   .text-light {
-    @apply font-light;
+    @apply font-light tracking-wide;
   }
   
-  /* Apple-style gradient */
   .teal-blue-gradient {
-    @apply bg-gradient-to-r from-poster-teal to-poster-blue bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-poster-teal via-poster-teal/90 to-poster-blue bg-clip-text text-transparent;
   }
   
-  /* Feature card hover effect */
   .feature-card {
-    @apply bg-poster-darkgray rounded-xl p-4 transition-all duration-300;
+    @apply bg-poster-darkgray/80 backdrop-blur-sm rounded-2xl p-6 transition-all duration-500 border border-white/5;
   }
   
   .feature-card:hover {
-    @apply transform scale-105 bg-opacity-90;
+    @apply transform scale-105 bg-opacity-100 border-poster-teal/20 shadow-lg shadow-poster-teal/5;
   }
   
-  /* Data flow lines */
   .data-flow-line {
     @apply stroke-poster-blue animate-data-flow;
     stroke-width: 1.5;
@@ -95,7 +88,6 @@
   }
 }
 
-/* Removing App.css default styles */
 #root {
   max-width: none;
   margin: 0;
