@@ -1,7 +1,10 @@
-const VisualAssets = () => {
+
+import { cn } from "@/lib/utils";
+
+const VisualAssets = ({ className }: { className?: string }) => {
   return (
-    <div className="space-y-8">
-      <h3 className="text-2xl md:text-[28pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
+    <div className={cn("space-y-8", className)}>
+      <h3 className="text-2xl md:text-[28pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight mb-6">
         Implementation Results
       </h3>
       
@@ -36,12 +39,12 @@ const VisualAssets = () => {
           
           <div className="text-center">
             <p className="text-sm text-poster-white/80 mb-1">Hardware Implementation</p>
-            <p className="text-xs text-poster-spacegray">Raspberry Pi 4B + Arduino Nano 33 BLE</p>
+            <p className="text-xs text-poster-spacegray">Raspberry Pi 4 (4GB) + Arduino Uno</p>
           </div>
           
           <div className="mt-3 p-2 bg-poster-teal/5 rounded border border-poster-teal/20">
             <p className="text-[10px] text-poster-white/70 text-center">
-              <span className="text-poster-teal">Testing Results:</span> 95% detection rate in variable lighting conditions
+              <span className="text-poster-teal">Components:</span> GrovePi Plus, Sensors, Actuators
             </p>
           </div>
         </div>
@@ -100,7 +103,7 @@ const VisualAssets = () => {
           
           <div className="text-center mt-3">
             <p className="text-sm text-poster-white/80 mb-1">User Interface</p>
-            <p className="text-xs text-poster-spacegray">SwiftUI for iOS, Material You for Android</p>
+            <p className="text-xs text-poster-spacegray">Python-Kivy with Material Design</p>
           </div>
           
           <div className="mt-3 p-2 bg-poster-teal/5 rounded border border-poster-teal/20">
@@ -114,57 +117,44 @@ const VisualAssets = () => {
         <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-poster-teal/30 transition-all duration-300">
           <h4 className="text-poster-white text-lg font-medium mb-3 flex items-center">
             <div className="w-2 h-2 bg-poster-teal rounded-full mr-2"></div>
-            Performance Metrics
+            System Components
           </h4>
           
-          <div className="h-40 flex items-center p-3">
-            <div className="w-full h-32 flex flex-col">
-              {/* Chart title */}
-              <div className="text-center mb-4">
-                <p className="text-xs text-poster-teal font-medium">Alert Latency Comparison (seconds)</p>
+          <div className="h-40 overflow-auto p-2 text-xs">
+            <div className="space-y-3">
+              <div>
+                <p className="text-poster-teal font-medium mb-0.5">Sensors:</p>
+                <ul className="text-poster-white/80 space-y-1 pl-3">
+                  <li>• Loudness Sensor (LM386)</li>
+                  <li>• Light Sensor (LM358)</li>
+                  <li>• PIR Motion Sensor</li>
+                  <li>• Ultrasonic Ranger</li>
+                </ul>
               </div>
               
-              {/* Bar chart */}
-              <div className="flex items-end space-x-4 justify-center h-24">
-                <div className="flex flex-col items-center">
-                  <div className="bg-gradient-to-t from-poster-teal to-poster-teal/70 h-8 w-8 rounded-t"></div>
-                  <p className="text-[10px] text-poster-white mt-1">I.R.I.S</p>
-                  <p className="text-[8px] text-poster-teal">2.5s</p>
-                </div>
-                
-                <div className="flex flex-col items-center">
-                  <div className="bg-poster-spacegray h-16 w-8 rounded-t"></div>
-                  <p className="text-[10px] text-poster-white mt-1">Competitors</p>
-                  <p className="text-[8px] text-poster-spacegray">7.2s</p>
-                </div>
-                
-                <div className="flex flex-col items-center">
-                  <div className="bg-gradient-to-t from-poster-blue/60 to-poster-blue/30 h-20 w-8 rounded-t"></div>
-                  <p className="text-[10px] text-poster-white mt-1">Cloud-Only</p>
-                  <p className="text-[8px] text-poster-blue">10.4s</p>
-                </div>
+              <div>
+                <p className="text-poster-teal font-medium mb-0.5">Actuators:</p>
+                <ul className="text-poster-white/80 space-y-1 pl-3">
+                  <li>• Servo Motor</li>
+                  <li>• Buzzer</li>
+                </ul>
               </div>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-3 gap-2 mt-2">
-            <div className="bg-poster-teal/5 rounded p-1.5 text-center">
-              <p className="text-[10px] text-poster-white/80 font-medium">Battery Life</p>
-              <p className="text-[8px] text-poster-teal">72 hours</p>
-            </div>
-            <div className="bg-poster-teal/5 rounded p-1.5 text-center">
-              <p className="text-[10px] text-poster-white/80 font-medium">Accuracy</p>
-              <p className="text-[8px] text-poster-teal">99.3%</p>
-            </div>
-            <div className="bg-poster-teal/5 rounded p-1.5 text-center">
-              <p className="text-[10px] text-poster-white/80 font-medium">Processing</p>
-              <p className="text-[8px] text-poster-teal">Edge ML</p>
+              
+              <div>
+                <p className="text-poster-teal font-medium mb-0.5">Connectivity:</p>
+                <ul className="text-poster-white/80 space-y-1 pl-3">
+                  <li>• GrovePi Plus</li>
+                  <li>• Arduino Expansion Shield</li>
+                  <li>• Base Shield for Arduino</li>
+                  <li>• Serial Bluetooth v3.0</li>
+                </ul>
+              </div>
             </div>
           </div>
           
           <div className="mt-3 p-2 bg-poster-teal/5 rounded border border-poster-teal/20">
             <p className="text-[10px] text-poster-white/70 text-center">
-              <span className="text-poster-teal">60%</span> faster response time than market alternatives
+              <span className="text-poster-teal">Module:</span> CM2211 - IoT Systems
             </p>
           </div>
         </div>

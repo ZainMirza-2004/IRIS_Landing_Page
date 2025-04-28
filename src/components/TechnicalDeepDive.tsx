@@ -1,7 +1,10 @@
-const TechnicalDeepDive = () => {
+
+import { cn } from "@/lib/utils";
+
+const TechnicalDeepDive = ({ className }: { className?: string }) => {
   return (
-    <div className="space-y-8">
-      <h3 className="text-2xl md:text-[32pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight">
+    <div className={cn("space-y-8", className)}>
+      <h3 className="text-2xl md:text-[32pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight mb-6">
         System Architecture & Data Flow
       </h3>
       
@@ -20,15 +23,15 @@ const TechnicalDeepDive = () => {
               <ul className="text-poster-white text-xs space-y-1.5">
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Hardware:</span>
-                  <span>Arduino (PIR, Camera)</span>
+                  <span>Raspberry Pi 4 (4GB)</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="text-poster-spacegray mr-3">Interface:</span>
+                  <span>GrovePi Plus</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Protocol:</span>
                   <span>BLE 5.0</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Data Format:</span>
-                  <span>Binary, JSON</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Security:</span>
@@ -48,7 +51,7 @@ const TechnicalDeepDive = () => {
               <ul className="text-poster-white text-xs space-y-1.5">
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Hardware:</span>
-                  <span>Raspberry Pi 4B</span>
+                  <span>Arduino Expansion Shield</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Protocol:</span>
@@ -104,11 +107,11 @@ const TechnicalDeepDive = () => {
               <ul className="text-poster-white text-xs space-y-1.5">
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Platform:</span>
-                  <span>iOS/Android</span>
+                  <span>Python-Kivy</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">UI:</span>
-                  <span>SwiftUI, Material You</span>
+                  <span>Material Design</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Notifications:</span>
@@ -124,24 +127,6 @@ const TechnicalDeepDive = () => {
         </div>
         
         <div className="space-y-6">
-          <div className="mt-8 space-y-4">
-            <h4 className="text-lg text-poster-white font-medium">Application of Course Concepts</h4>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
-                <h5 className="text-poster-teal text-sm font-medium mb-2">CSE3015 (IoT Systems)</h5>
-                <p className="text-xs text-poster-white/80">Applied concepts include sensor fusion, edge computing, power efficiency protocols, and embedded systems programming for real-time processing.</p>
-              </div>
-              <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
-                <h5 className="text-poster-teal text-sm font-medium mb-2">CSE3050 (Security)</h5>
-                <p className="text-xs text-poster-white/80">Implemented multi-layer security using AES encryption, secure boot, certificate-based authentication, and MFA for user access control.</p>
-              </div>
-              <div className="bg-poster-darkgray/50 backdrop-blur-sm p-3 rounded-lg border border-white/5">
-                <h5 className="text-poster-teal text-sm font-medium mb-2">CSE2010 (Networks)</h5>
-                <p className="text-xs text-poster-white/80">Utilized BLE for low-power edge communications, Wi-Fi for fog layer, and MQTT protocol for efficient cloud messaging with QoS guarantees.</p>
-              </div>
-            </div>
-          </div>
-          
           <div className="mt-8 space-y-4">
             <h4 className="text-lg text-poster-white font-medium">Critical Design Decisions</h4>
             <ul className="text-xs text-poster-white/80 space-y-2">

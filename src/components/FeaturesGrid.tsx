@@ -31,7 +31,7 @@ const FeatureCard = ({ icon, title, detail, complexity, technology, courseLink }
               <span className="text-[10px] text-poster-white/80">{technology}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-[10px] text-poster-spacegray">Course:</span>
+              <span className="text-[10px] text-poster-spacegray">Module:</span>
               <span className="text-[10px] text-poster-teal">{courseLink}</span>
             </div>
           </div>
@@ -49,7 +49,7 @@ const FeaturesGrid = () => {
       detail: "99% accuracy",
       complexity: "Medium",
       technology: "PIR + ML Model",
-      courseLink: "CSE3015"
+      courseLink: "CM2211"
     },
     { 
       icon: <Fingerprint size={28} strokeWidth={1.5} />, 
@@ -57,7 +57,7 @@ const FeaturesGrid = () => {
       detail: "TLS 1.3 encryption",
       complexity: "High",
       technology: "Secure Enclave",
-      courseLink: "CSE3050"
+      courseLink: "CM2211"
     },
     { 
       icon: <Cloud size={28} strokeWidth={1.5} />, 
@@ -65,7 +65,7 @@ const FeaturesGrid = () => {
       detail: "AES-256",
       complexity: "Medium",
       technology: "AWS IoT Core",
-      courseLink: "CSE2010"
+      courseLink: "CM2211"
     },
     { 
       icon: <Moon size={28} strokeWidth={1.5} />, 
@@ -73,7 +73,7 @@ const FeaturesGrid = () => {
       detail: "4K IR camera",
       complexity: "High",
       technology: "IR + Image Processing",
-      courseLink: "CSE3015"
+      courseLink: "CM2211"
     },
     { 
       icon: <Package size={28} strokeWidth={1.5} />, 
@@ -81,7 +81,7 @@ const FeaturesGrid = () => {
       detail: "TensorFlow Lite AI",
       complexity: "Very High",
       technology: "TensorFlow, Edge ML",
-      courseLink: "CSE3015"
+      courseLink: "CM2211"
     },
     { 
       icon: <Bell size={28} strokeWidth={1.5} />, 
@@ -89,7 +89,7 @@ const FeaturesGrid = () => {
       detail: "<3s latency",
       complexity: "Medium",
       technology: "MQTT Protocol",
-      courseLink: "CSE2010"
+      courseLink: "CM2211"
     },
     { 
       icon: <Shield size={28} strokeWidth={1.5} />, 
@@ -97,15 +97,15 @@ const FeaturesGrid = () => {
       detail: "MFA",
       complexity: "High",
       technology: "Anomaly Detection",
-      courseLink: "CSE3050"
+      courseLink: "CM2211"
     },
     { 
       icon: <Smartphone size={28} strokeWidth={1.5} />, 
       title: "Companion App", 
-      detail: "SwiftUI",
+      detail: "Python-Kivy",
       complexity: "High",
-      technology: "SwiftUI, React Native",
-      courseLink: "CSE3015"
+      technology: "Python-Kivy, Material Design",
+      courseLink: "CM2211"
     },
     { 
       icon: <Droplets size={28} strokeWidth={1.5} />, 
@@ -113,7 +113,7 @@ const FeaturesGrid = () => {
       detail: "IP65 rating",
       complexity: "Medium",
       technology: "Enclosure Design",
-      courseLink: "CSE3015"
+      courseLink: "CM2211"
     },
     { 
       icon: <Box size={28} strokeWidth={1.5} />, 
@@ -121,7 +121,7 @@ const FeaturesGrid = () => {
       detail: "Plug-and-play",
       complexity: "Medium",
       technology: "Modular Architecture",
-      courseLink: "CSE3015"
+      courseLink: "CM2211"
     }
   ];
 

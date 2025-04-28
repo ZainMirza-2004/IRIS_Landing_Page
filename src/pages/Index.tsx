@@ -1,3 +1,4 @@
+
 import PosterHeader from "@/components/PosterHeader";
 import CoreVisual from "@/components/CoreVisual";
 import ValueProposition from "@/components/ValueProposition";
@@ -35,7 +36,7 @@ const Index = () => {
             </div>
             <div>
               <p className="text-poster-white text-sm font-medium">I.R.I.S. Project</p>
-              <p className="text-poster-spacegray text-xs">CSE3015 - IoT Systems</p>
+              <p className="text-poster-spacegray text-xs">CM2211 - IoT Systems</p>
             </div>
           </div>
           

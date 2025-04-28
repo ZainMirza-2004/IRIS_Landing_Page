@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 import { ShieldCheck } from "lucide-react";
 
@@ -13,7 +14,7 @@ const PosterHeader = ({ className }: { className?: string }) => {
           </div>
           <div className="bg-gradient-to-r from-poster-teal/20 to-transparent px-4 py-1.5 rounded-lg backdrop-blur-sm border border-poster-teal/10 inline-flex items-center">
             <ShieldCheck className="w-4 h-4 text-poster-teal mr-2" />
-            <span className="text-poster-white text-sm font-medium">Project: CSE3015-Final</span>
+            <span className="text-poster-white text-sm font-medium">Project: CM2211-Final</span>
           </div>
         </div>
         
