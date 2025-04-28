@@ -128,7 +128,7 @@ const VisualAssets = ({ className }: { className?: string }) => {
                   <li>• GrovePi Plus [Interfaces Grove sensors with Pi]</li>
                   <li>• Arduino Expansion Shield for Pi B+ (V2.0)</li>
                   <li>• Base Shield for Arduino Uno</li>
-                  <li>• Serial Bluetooth v3.0 {CSR-4 + CMOS + AFH}</li>
+                  <li>• Serial Bluetooth v3.0 {"CSR-4 + CMOS + AFH"}</li>
                 </ul>
               </div>
               
