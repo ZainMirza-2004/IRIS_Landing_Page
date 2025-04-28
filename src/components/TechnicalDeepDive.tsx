@@ -1,6 +1,6 @@
 
 import { cn } from "@/lib/utils";
-import { RefreshCcw, Lock, Database, Wifi, Cpu, Layers } from "lucide-react";
+import { RefreshCcw, Lock, Database, Wifi, Cpu, Layers, ArrowRight } from "lucide-react";
 
 const TechnicalDeepDive = ({ className }: { className?: string }) => {
   return (
@@ -56,6 +56,16 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
             </div>
           </div>
           
+          {/* Arrow from Edge to Fog */}
+          <div className="z-20 flex items-center">
+            <div className="w-8 relative">
+              <div className="absolute top-1/2 left-0 w-8 flex flex-col items-center -translate-y-1/2">
+                <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
+                <div className="text-[8px] text-poster-teal mt-1">Raw Data</div>
+              </div>
+            </div>
+          </div>
+          
           {/* Fog Layer */}
           <div className="flex flex-col items-center z-10">
             <div className="bg-poster-darkgray p-4 rounded-lg border border-white/10 relative">
@@ -94,6 +104,16 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
             </div>
           </div>
           
+          {/* Arrow from Fog to Cloud */}
+          <div className="z-20 flex items-center">
+            <div className="w-8 relative">
+              <div className="absolute top-1/2 left-0 w-8 flex flex-col items-center -translate-y-1/2">
+                <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
+                <div className="text-[8px] text-poster-teal mt-1">Processed Data</div>
+              </div>
+            </div>
+          </div>
+          
           {/* Cloud Layer */}
           <div className="flex flex-col items-center z-10">
             <div className="bg-poster-darkgray p-4 rounded-lg border border-white/10 relative">
@@ -128,6 +148,16 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
                   <li>• ML model training</li>
                   <li>• Event correlation</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+          
+          {/* Arrow from Cloud to App */}
+          <div className="z-20 flex items-center">
+            <div className="w-8 relative">
+              <div className="absolute top-1/2 left-0 w-8 flex flex-col items-center -translate-y-1/2">
+                <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
+                <div className="text-[8px] text-poster-teal mt-1">Insights</div>
               </div>
             </div>
           </div>
