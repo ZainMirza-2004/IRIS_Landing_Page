@@ -1,5 +1,6 @@
 
 import { cn } from "@/lib/utils";
+import { RefreshCcw, Lock, Database, Wifi, Cpu, Layers } from "lucide-react";
 
 const TechnicalDeepDive = ({ className }: { className?: string }) => {
   return (
@@ -9,9 +10,12 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
       </h3>
       
       <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-8 border border-white/10 space-y-8">
+        {/* Architecture Diagram with Data Flow */}
         <div className="flex items-center justify-between relative">
-          {/* Connecting lines */}
+          {/* Connecting lines for data flow */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-poster-teal via-poster-blue to-poster-teal opacity-20 transform -translate-y-1/2 z-0"></div>
+          <div className="absolute top-1/4 left-0 right-0 h-0.5 bg-poster-teal/10 z-0 dotted-line"></div>
+          <div className="absolute bottom-1/4 left-0 right-0 h-0.5 bg-poster-blue/10 z-0 dotted-line"></div>
           
           {/* Edge Layer */}
           <div className="flex flex-col items-center z-10">
@@ -38,6 +42,17 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
                   <span>AES-128</span>
                 </li>
               </ul>
+              
+              {/* Data types collected */}
+              <div className="mt-3 pt-2 border-t border-white/10">
+                <p className="text-[10px] text-poster-teal mb-1">Data Collected:</p>
+                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
+                  <li>• Motion events (boolean)</li>
+                  <li>• Sound levels (dB)</li>
+                  <li>• Light intensity (lux)</li>
+                  <li>• Distance (cm)</li>
+                </ul>
+              </div>
             </div>
           </div>
           
@@ -66,6 +81,16 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
                   <span>TLS 1.3, MFA</span>
                 </li>
               </ul>
+              
+              {/* Data Analytics */}
+              <div className="mt-3 pt-2 border-t border-white/10">
+                <p className="text-[10px] text-poster-teal mb-1">Data Analytics:</p>
+                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
+                  <li>• Event classification</li>
+                  <li>• Anomaly detection</li>
+                  <li>• Real-time filtering</li>
+                </ul>
+              </div>
             </div>
           </div>
           
@@ -94,6 +119,16 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
                   <span>AES-256, IAM</span>
                 </li>
               </ul>
+              
+              {/* Data Storage */}
+              <div className="mt-3 pt-2 border-t border-white/10">
+                <p className="text-[10px] text-poster-teal mb-1">Processing:</p>
+                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
+                  <li>• Long-term pattern analysis</li>
+                  <li>• ML model training</li>
+                  <li>• Event correlation</li>
+                </ul>
+              </div>
             </div>
           </div>
           
@@ -122,6 +157,39 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
                   <span>Biometric, OAuth 2.0</span>
                 </li>
               </ul>
+              
+              {/* User Interaction */}
+              <div className="mt-3 pt-2 border-t border-white/10">
+                <p className="text-[10px] text-poster-teal mb-1">User Features:</p>
+                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
+                  <li>• Real-time monitoring</li>
+                  <li>• Custom alert settings</li>
+                  <li>• Actionable controls</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Data Flow Indicators */}
+        <div className="relative h-12 w-full">
+          <div className="absolute top-0 left-0 right-0 h-full flex justify-around">
+            {/* Data Flow Indicators */}
+            <div className="data-flow-indicator flex items-center">
+              <RefreshCcw className="w-4 h-4 text-poster-teal mr-1" />
+              <span className="text-[10px] text-poster-teal">Real-time data flow</span>
+            </div>
+            <div className="data-flow-indicator flex items-center">
+              <Lock className="w-4 h-4 text-poster-teal mr-1" />
+              <span className="text-[10px] text-poster-teal">End-to-end encryption</span>
+            </div>
+            <div className="data-flow-indicator flex items-center">
+              <Database className="w-4 h-4 text-poster-teal mr-1" />
+              <span className="text-[10px] text-poster-teal">Secure storage</span>
+            </div>
+            <div className="data-flow-indicator flex items-center">
+              <Wifi className="w-4 h-4 text-poster-teal mr-1" />
+              <span className="text-[10px] text-poster-teal">Multi-protocol comms</span>
             </div>
           </div>
         </div>
@@ -135,6 +203,63 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
               <li>• Modular architecture allows for component upgrades without total system replacement</li>
               <li>• Human-centered design prioritizes intuitive controls and meaningful alerts</li>
             </ul>
+          </div>
+          
+          {/* Security & Privacy Techniques */}
+          <div className="grid grid-cols-2 gap-4 mt-6">
+            <div className="bg-poster-darkgray/60 p-3 rounded-lg border border-white/5">
+              <div className="flex items-center mb-2">
+                <Lock className="w-4 h-4 text-poster-teal mr-2" />
+                <h5 className="text-sm text-poster-white font-medium">Security Layers</h5>
+              </div>
+              <ul className="text-[10px] text-poster-white/70 space-y-1 pl-2">
+                <li>• Hardware security modules</li>
+                <li>• End-to-end encryption (AES-256)</li>
+                <li>• Secure boot process</li>
+                <li>• Certificate-based authentication</li>
+                <li>• OAuth 2.0 & biometric authentication</li>
+              </ul>
+            </div>
+            
+            <div className="bg-poster-darkgray/60 p-3 rounded-lg border border-white/5">
+              <div className="flex items-center mb-2">
+                <Cpu className="w-4 h-4 text-poster-teal mr-2" />
+                <h5 className="text-sm text-poster-white font-medium">Data Processing</h5>
+              </div>
+              <ul className="text-[10px] text-poster-white/70 space-y-1 pl-2">
+                <li>• On-device filtering (minimize data transfer)</li>
+                <li>• Hybrid ML model architecture</li>
+                <li>• Event-based data collection</li>
+                <li>• Privacy-preserving analytics</li>
+                <li>• Data minimization principles</li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Network & Communication */}
+          <div className="mt-6">
+            <div className="flex items-center mb-2">
+              <Layers className="w-5 h-5 text-poster-teal mr-2" />
+              <h5 className="text-sm text-poster-white font-medium">Network Protocols & Communication</h5>
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+                <p className="text-[10px] text-poster-teal font-medium">BLE 5.0</p>
+                <p className="text-[8px] text-poster-white/70">Edge sensors</p>
+              </div>
+              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+                <p className="text-[10px] text-poster-teal font-medium">Wi-Fi 6</p>
+                <p className="text-[8px] text-poster-white/70">Local network</p>
+              </div>
+              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+                <p className="text-[10px] text-poster-teal font-medium">MQTT</p>
+                <p className="text-[8px] text-poster-white/70">Cloud messaging</p>
+              </div>
+              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+                <p className="text-[10px] text-poster-teal font-medium">REST API</p>
+                <p className="text-[8px] text-poster-white/70">App integration</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

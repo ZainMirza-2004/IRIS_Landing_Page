@@ -21,7 +21,7 @@ const Index = () => {
         {/* Technical Architecture & Data Flow */}
         <TechnicalDeepDive className="mb-10" />
         
-        {/* Implementation Results */}
+        {/* Implementation Results & Feature Analysis */}
         <VisualAssets className="mb-10" />
         
         {/* Footer with additional information */}
