@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -59,7 +60,8 @@ export default {
           blue: '#007AFF',
           white: '#FFFFFF',
           spacegray: '#8A898C',
-          darkgray: '#333333'
+          darkgray: '#333333',
+          featureRed: 'rgb(192, 0, 0)'
         }
       },
       strokeWidth: {

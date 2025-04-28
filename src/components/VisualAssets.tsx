@@ -39,7 +39,7 @@ const VisualAssets = ({ className }: { className?: string }) => {
           
           <div className="text-center">
             <p className="text-sm text-poster-white/80 mb-1">Hardware Implementation</p>
-            <p className="text-xs text-poster-spacegray">Raspberry Pi 4 (4GB) + Arduino Uno</p>
+            <p className="text-xs text-poster-spacegray">Raspberry Pi 4 (4GB RAM)</p>
           </div>
           
           <div className="mt-3 p-2 bg-poster-teal/5 rounded border border-poster-teal/20">
@@ -113,7 +113,7 @@ const VisualAssets = ({ className }: { className?: string }) => {
           </div>
         </div>
         
-        {/* Performance Data */}
+        {/* System Components */}
         <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-poster-teal/30 transition-all duration-300">
           <h4 className="text-poster-white text-lg font-medium mb-3 flex items-center">
             <div className="w-2 h-2 bg-poster-teal rounded-full mr-2"></div>
@@ -122,6 +122,16 @@ const VisualAssets = ({ className }: { className?: string }) => {
           
           <div className="h-40 overflow-auto p-2 text-xs">
             <div className="space-y-3">
+              <div>
+                <p className="text-poster-teal font-medium mb-0.5">Interface and Connectivity:</p>
+                <ul className="text-poster-white/80 space-y-1 pl-3">
+                  <li>• GrovePi Plus [Interfaces Grove sensors with Pi]</li>
+                  <li>• Arduino Expansion Shield for Pi B+ (V2.0)</li>
+                  <li>• Base Shield for Arduino Uno</li>
+                  <li>• Serial Bluetooth v3.0 {CSR-04 + CMOS + AFH}</li>
+                </ul>
+              </div>
+              
               <div>
                 <p className="text-poster-teal font-medium mb-0.5">Sensors:</p>
                 <ul className="text-poster-white/80 space-y-1 pl-3">
@@ -137,16 +147,6 @@ const VisualAssets = ({ className }: { className?: string }) => {
                 <ul className="text-poster-white/80 space-y-1 pl-3">
                   <li>• Servo Motor</li>
                   <li>• Buzzer</li>
-                </ul>
-              </div>
-              
-              <div>
-                <p className="text-poster-teal font-medium mb-0.5">Connectivity:</p>
-                <ul className="text-poster-white/80 space-y-1 pl-3">
-                  <li>• GrovePi Plus</li>
-                  <li>• Arduino Expansion Shield</li>
-                  <li>• Base Shield for Arduino</li>
-                  <li>• Serial Bluetooth v3.0</li>
                 </ul>
               </div>
             </div>

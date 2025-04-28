@@ -8,12 +8,21 @@ type FeatureCardProps = {
   complexity: string;
   technology: string;
   courseLink: string;
+  featureNumber: number;
 }
 
-const FeatureCard = ({ icon, title, detail, complexity, technology, courseLink }: FeatureCardProps) => {
+const FeatureCard = ({ icon, title, detail, complexity, technology, courseLink, featureNumber }: FeatureCardProps) => {
   return (
     <div className="feature-card group relative backdrop-blur-sm border border-white/5">
-      <div className="flex flex-col items-center">
+      {/* Feature number circle */}
+      <div 
+        className="absolute -top-3 -left-3 w-8 h-8 rounded-full flex items-center justify-center" 
+        style={{ backgroundColor: 'rgb(192, 0, 0)' }}
+      >
+        <span className="text-white font-bold text-sm">{featureNumber}</span>
+      </div>
+      
+      <div className="flex flex-col items-center pt-3">
         <div className="mb-2 text-poster-teal transform transition-all duration-300 group-hover:scale-110 group-hover:text-poster-white">
           {icon}
         </div>
@@ -141,6 +150,7 @@ const FeaturesGrid = () => {
             complexity={feature.complexity}
             technology={feature.technology}
             courseLink={feature.courseLink}
+            featureNumber={index + 1}
           />
         ))}
       </div>
