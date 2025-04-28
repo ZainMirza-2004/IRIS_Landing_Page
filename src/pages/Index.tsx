@@ -7,25 +7,25 @@ import VisualAssets from "@/components/VisualAssets";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-poster-background p-6 md:p-10">
-      <div className="poster-container w-full max-w-7xl aspect-[1/1.414] overflow-auto p-10 border border-poster-spacegray/20 shadow-xl shadow-black/20 rounded-lg">
+    <div className="min-h-screen flex items-center justify-center bg-poster-background p-6 md:p-8">
+      <div className="poster-container w-full max-w-7xl aspect-[1/1.414] overflow-auto p-8 border border-poster-spacegray/20 shadow-xl shadow-black/20 rounded-lg">
         {/* Project Title & Description */}
-        <PosterHeader className="mb-10" />
+        <PosterHeader className="mb-8" />
         
         {/* Value Proposition & Features Grid */}
-        <div className="grid grid-cols-2 gap-10 mb-10">
+        <div className="grid grid-cols-2 gap-8 mb-8">
           <ValueProposition />
           <FeaturesGrid />
         </div>
         
         {/* Technical Architecture & Data Flow */}
-        <TechnicalDeepDive className="mb-10" />
+        <TechnicalDeepDive className="mb-8" />
         
         {/* Implementation Results & Feature Analysis */}
-        <VisualAssets className="mb-10" />
+        <VisualAssets className="mb-8" />
         
         {/* Footer with additional information */}
-        <div className="mt-10 pt-8 border-t border-poster-spacegray/20 flex justify-between items-center">
+        <div className="mt-6 pt-6 border-t border-poster-spacegray/20 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-r from-poster-teal to-poster-blue flex items-center justify-center">
               <span className="text-white font-bold">IR</span>

@@ -4,7 +4,7 @@ import { ShieldCheck } from "lucide-react";
 
 const PosterHeader = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("w-full flex flex-col items-center space-y-8", className)}>
+    <div className={cn("w-full flex flex-col items-center space-y-6", className)}>
       <div className="flex justify-between items-start w-full">
         <div className="flex-1">
           <div className="flex items-center space-x-2 mb-3">
@@ -19,11 +19,11 @@ const PosterHeader = ({ className }: { className?: string }) => {
         </div>
         
         <div className="flex flex-col items-center flex-grow-2">
-          <h1 className="text-8xl md:text-[80pt] header-bold tracking-tighter teal-blue-gradient mb-2">
+          <h1 className="text-8xl md:text-[80pt] header-bold tracking-tighter teal-blue-gradient mb-1">
             I.R.I.S.
           </h1>
           
-          <h2 className="text-2xl md:text-[36pt] text-light text-poster-white mb-4 tracking-wide">
+          <h2 className="text-2xl md:text-[36pt] text-light text-poster-white mb-2 tracking-wide">
             Intelligent, Responsive IoT Security System
           </h2>
           
@@ -41,13 +41,11 @@ const PosterHeader = ({ className }: { className?: string }) => {
         </div>
       </div>
       
-      <div className="mt-8 w-full max-w-2xl">
-        <div className="p-4 bg-poster-darkgray/40 rounded-lg backdrop-blur-md border border-white/5">
+      <div className="mt-4 w-full max-w-2xl">
+        <div className="p-3 bg-poster-darkgray/40 rounded-lg backdrop-blur-md border border-white/5">
           <p className="text-sm text-poster-white/80 leading-relaxed text-center">
-            I.R.I.S. is a comprehensive IoT security system that integrates edge computing, 
-            machine learning, and encrypted communications to provide an intelligent, adaptive security solution 
-            for residential and commercial spaces. The system utilizes a distributed architecture 
-            to ensure minimal latency, enhanced privacy, and reduced cloud dependency.
+            I.R.I.S. integrates edge computing, machine learning, and encrypted communications 
+            with a distributed architecture for minimal latency, enhanced privacy, and reduced cloud dependency.
           </p>
         </div>
       </div>

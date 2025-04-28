@@ -4,12 +4,12 @@ import { RefreshCcw, Lock, Database, Wifi, Cpu, Layers, ArrowRight } from "lucid
 
 const TechnicalDeepDive = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("space-y-8", className)}>
+    <div className={cn("space-y-6", className)}>
       <h3 className="text-2xl md:text-[32pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight mb-6">
         System Architecture & Data Flow
       </h3>
       
-      <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-8 border border-white/10 space-y-8">
+      <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-6 border border-white/10 space-y-6">
         {/* Architecture Diagram with Data Flow */}
         <div className="flex items-center justify-between relative">
           {/* Connecting lines for data flow */}
@@ -19,39 +19,26 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           
           {/* Edge Layer */}
           <div className="flex flex-col items-center z-10">
-            <div className="bg-poster-darkgray p-4 rounded-lg border border-white/10 relative">
+            <div className="bg-poster-darkgray p-3 rounded-lg border border-white/10 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
                 Edge Layer
               </div>
-              <p className="text-poster-teal font-medium text-center mb-2">Sensing & Actuation</p>
-              <ul className="text-poster-white text-xs space-y-1.5">
+              <p className="text-poster-teal font-medium text-center mb-1">Sensing & Actuation</p>
+              <ul className="text-poster-white text-xs space-y-1">
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Hardware:</span>
-                  <span>Raspberry Pi 4 (4GB)</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Interface:</span>
-                  <span>GrovePi Plus</span>
+                  <span>Raspberry Pi 4</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Protocol:</span>
                   <span>BLE 5.0</span>
                 </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Security:</span>
-                  <span>AES-128</span>
-                </li>
               </ul>
               
               {/* Data types collected */}
-              <div className="mt-3 pt-2 border-t border-white/10">
-                <p className="text-[10px] text-poster-teal mb-1">Data Collected:</p>
-                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
-                  <li>• Motion events (boolean)</li>
-                  <li>• Sound levels (dB)</li>
-                  <li>• Light intensity (lux)</li>
-                  <li>• Distance (cm)</li>
-                </ul>
+              <div className="mt-2 pt-1 border-t border-white/10">
+                <p className="text-[10px] text-poster-teal mb-1">Data:</p>
+                <p className="text-[9px] text-poster-white/70">Motion, Sound, Light, Distance</p>
               </div>
             </div>
           </div>
@@ -68,38 +55,26 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           
           {/* Fog Layer */}
           <div className="flex flex-col items-center z-10">
-            <div className="bg-poster-darkgray p-4 rounded-lg border border-white/10 relative">
+            <div className="bg-poster-darkgray p-3 rounded-lg border border-white/10 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
                 Fog Layer
               </div>
-              <p className="text-poster-teal font-medium text-center mb-2">Processing & AI</p>
-              <ul className="text-poster-white text-xs space-y-1.5">
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Hardware:</span>
-                  <span>Arduino Expansion Shield</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Protocol:</span>
-                  <span>Wi-Fi 6, 802.11ax</span>
-                </li>
+              <p className="text-poster-teal font-medium text-center mb-1">Processing & AI</p>
+              <ul className="text-poster-white text-xs space-y-1">
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Processing:</span>
                   <span>TensorFlow Lite</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Security:</span>
-                  <span>TLS 1.3, MFA</span>
+                  <span className="text-poster-spacegray mr-3">Protocol:</span>
+                  <span>Wi-Fi 6</span>
                 </li>
               </ul>
               
               {/* Data Analytics */}
-              <div className="mt-3 pt-2 border-t border-white/10">
-                <p className="text-[10px] text-poster-teal mb-1">Data Analytics:</p>
-                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
-                  <li>• Event classification</li>
-                  <li>• Anomaly detection</li>
-                  <li>• Real-time filtering</li>
-                </ul>
+              <div className="mt-2 pt-1 border-t border-white/10">
+                <p className="text-[10px] text-poster-teal mb-1">Analytics:</p>
+                <p className="text-[9px] text-poster-white/70">Classification, Anomaly detection</p>
               </div>
             </div>
           </div>
@@ -116,38 +91,26 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           
           {/* Cloud Layer */}
           <div className="flex flex-col items-center z-10">
-            <div className="bg-poster-darkgray p-4 rounded-lg border border-white/10 relative">
+            <div className="bg-poster-darkgray p-3 rounded-lg border border-white/10 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
                 Cloud Layer
               </div>
-              <p className="text-poster-teal font-medium text-center mb-2">Data Analytics</p>
-              <ul className="text-poster-white text-xs space-y-1.5">
+              <p className="text-poster-teal font-medium text-center mb-1">Data Analytics</p>
+              <ul className="text-poster-white text-xs space-y-1">
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Platform:</span>
                   <span>AWS IoT Core</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Protocol:</span>
-                  <span>MQTT, REST API</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Storage:</span>
-                  <span>DynamoDB, S3</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Security:</span>
-                  <span>AES-256, IAM</span>
+                  <span>MQTT</span>
                 </li>
               </ul>
               
               {/* Data Storage */}
-              <div className="mt-3 pt-2 border-t border-white/10">
+              <div className="mt-2 pt-1 border-t border-white/10">
                 <p className="text-[10px] text-poster-teal mb-1">Processing:</p>
-                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
-                  <li>• Long-term pattern analysis</li>
-                  <li>• ML model training</li>
-                  <li>• Event correlation</li>
-                </ul>
+                <p className="text-[9px] text-poster-white/70">Pattern analysis, ML training</p>
               </div>
             </div>
           </div>
@@ -164,45 +127,33 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           
           {/* App Layer */}
           <div className="flex flex-col items-center z-10">
-            <div className="bg-poster-darkgray p-4 rounded-lg border border-white/10 relative">
+            <div className="bg-poster-darkgray p-3 rounded-lg border border-white/10 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
                 Application Layer
               </div>
-              <p className="text-poster-teal font-medium text-center mb-2">Human Interaction</p>
-              <ul className="text-poster-white text-xs space-y-1.5">
+              <p className="text-poster-teal font-medium text-center mb-1">Human Interaction</p>
+              <ul className="text-poster-white text-xs space-y-1">
                 <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Platform:</span>
                   <span>Python-Kivy</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">UI:</span>
-                  <span>Material Design</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Notifications:</span>
-                  <span>Push, SMS</span>
-                </li>
-                <li className="flex justify-between">
                   <span className="text-poster-spacegray mr-3">Security:</span>
-                  <span>Biometric, OAuth 2.0</span>
+                  <span>Biometric</span>
                 </li>
               </ul>
               
               {/* User Interaction */}
-              <div className="mt-3 pt-2 border-t border-white/10">
-                <p className="text-[10px] text-poster-teal mb-1">User Features:</p>
-                <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
-                  <li>• Real-time monitoring</li>
-                  <li>• Custom alert settings</li>
-                  <li>• Actionable controls</li>
-                </ul>
+              <div className="mt-2 pt-1 border-t border-white/10">
+                <p className="text-[10px] text-poster-teal mb-1">Features:</p>
+                <p className="text-[9px] text-poster-white/70">Monitoring, Alerts, Controls</p>
               </div>
             </div>
           </div>
         </div>
         
         {/* Data Flow Indicators */}
-        <div className="relative h-12 w-full">
+        <div className="relative h-8 w-full">
           <div className="absolute top-0 left-0 right-0 h-full flex justify-around">
             {/* Data Flow Indicators */}
             <div className="data-flow-indicator flex items-center">
@@ -224,68 +175,64 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           </div>
         </div>
         
-        <div className="space-y-6">
-          <div className="mt-8 space-y-4">
+        <div className="space-y-4 mt-2">
+          <div className="mt-4 space-y-2">
             <h4 className="text-lg text-poster-white font-medium">Critical Design Decisions</h4>
-            <ul className="text-xs text-poster-white/80 space-y-2">
-              <li>• Edge processing for sensitive data minimizes cloud exposure and reduces latency</li>
-              <li>• Multi-layered security approach with different encryption levels based on data sensitivity</li>
-              <li>• Modular architecture allows for component upgrades without total system replacement</li>
-              <li>• Human-centered design prioritizes intuitive controls and meaningful alerts</li>
+            <ul className="text-xs text-poster-white/80 grid grid-cols-2 gap-x-4 gap-y-2">
+              <li>• Edge processing minimizes cloud exposure</li>
+              <li>• Multi-layered security approach</li>
+              <li>• Modular architecture for component upgrades</li>
+              <li>• Human-centered design for intuitive controls</li>
             </ul>
           </div>
           
           {/* Security & Privacy Techniques */}
-          <div className="grid grid-cols-2 gap-4 mt-6">
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <div className="bg-poster-darkgray/60 p-3 rounded-lg border border-white/5">
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-1">
                 <Lock className="w-4 h-4 text-poster-teal mr-2" />
-                <h5 className="text-sm text-poster-white font-medium">Security Layers</h5>
+                <h5 className="text-sm text-poster-white font-medium">Security</h5>
               </div>
-              <ul className="text-[10px] text-poster-white/70 space-y-1 pl-2">
+              <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
                 <li>• Hardware security modules</li>
                 <li>• End-to-end encryption (AES-256)</li>
-                <li>• Secure boot process</li>
-                <li>• Certificate-based authentication</li>
-                <li>• OAuth 2.0 & biometric authentication</li>
+                <li>• Certificate authentication</li>
               </ul>
             </div>
             
             <div className="bg-poster-darkgray/60 p-3 rounded-lg border border-white/5">
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-1">
                 <Cpu className="w-4 h-4 text-poster-teal mr-2" />
                 <h5 className="text-sm text-poster-white font-medium">Data Processing</h5>
               </div>
-              <ul className="text-[10px] text-poster-white/70 space-y-1 pl-2">
-                <li>• On-device filtering (minimize data transfer)</li>
+              <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
+                <li>• On-device filtering</li>
                 <li>• Hybrid ML model architecture</li>
-                <li>• Event-based data collection</li>
                 <li>• Privacy-preserving analytics</li>
-                <li>• Data minimization principles</li>
               </ul>
             </div>
           </div>
           
           {/* Network & Communication */}
-          <div className="mt-6">
-            <div className="flex items-center mb-2">
-              <Layers className="w-5 h-5 text-poster-teal mr-2" />
-              <h5 className="text-sm text-poster-white font-medium">Network Protocols & Communication</h5>
+          <div className="mt-4">
+            <div className="flex items-center mb-1">
+              <Layers className="w-4 h-4 text-poster-teal mr-2" />
+              <h5 className="text-sm text-poster-white font-medium">Network Protocols</h5>
             </div>
             <div className="grid grid-cols-4 gap-2">
-              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
                 <p className="text-[10px] text-poster-teal font-medium">BLE 5.0</p>
                 <p className="text-[8px] text-poster-white/70">Edge sensors</p>
               </div>
-              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
                 <p className="text-[10px] text-poster-teal font-medium">Wi-Fi 6</p>
                 <p className="text-[8px] text-poster-white/70">Local network</p>
               </div>
-              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
                 <p className="text-[10px] text-poster-teal font-medium">MQTT</p>
                 <p className="text-[8px] text-poster-white/70">Cloud messaging</p>
               </div>
-              <div className="bg-poster-darkgray/40 p-2 rounded-lg text-center">
+              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
                 <p className="text-[10px] text-poster-teal font-medium">REST API</p>
                 <p className="text-[8px] text-poster-white/70">App integration</p>
               </div>
