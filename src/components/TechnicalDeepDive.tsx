@@ -4,12 +4,12 @@ import { RefreshCcw, Lock, Database, Wifi, Cpu, Layers, ArrowRight } from "lucid
 
 const TechnicalDeepDive = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("space-y-6", className)}>
-      <h3 className="text-2xl md:text-[32pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight mb-6">
-        System Architecture & Data Flow
+    <div className={cn("space-y-4", className)}>
+      <h3 className="text-2xl md:text-[28pt] font-bold inline-block border-b-4 border-poster-teal text-poster-white tracking-tight mb-4">
+        Architecture & Data Flow
       </h3>
       
-      <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-6 border border-white/10 space-y-6">
+      <div className="bg-poster-darkgray/70 backdrop-blur-sm rounded-lg p-4 border border-white/10 space-y-4">
         {/* Architecture Diagram with Data Flow */}
         <div className="flex items-center justify-between relative">
           {/* Connecting lines for data flow */}
@@ -21,35 +21,42 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           <div className="flex flex-col items-center z-10">
             <div className="bg-poster-darkgray p-3 rounded-lg border border-white/10 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
-                Edge Layer
+                Edge Node
               </div>
-              <p className="text-poster-teal font-medium text-center mb-1">Sensing & Actuation</p>
-              <ul className="text-poster-white text-xs space-y-1">
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Hardware:</span>
-                  <span>Raspberry Pi 4</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Protocol:</span>
-                  <span>BLE 5.0</span>
-                </li>
-              </ul>
-              
-              {/* Data types collected */}
-              <div className="mt-2 pt-1 border-t border-white/10">
-                <p className="text-[10px] text-poster-teal mb-1">Data:</p>
-                <p className="text-[9px] text-poster-white/70">Motion, Sound, Light, Distance</p>
+              <div className="space-y-1 text-xs">
+                <p className="text-poster-teal font-medium">Sensor Node</p>
+                <ul className="text-poster-white/80 text-[9px] space-y-0.5">
+                  <li>• Hardware: Arduino</li>
+                  <li>• Sensors: BLE v1, Buzzer, PIR, Loudness, Temp</li>
+                  <li>• Protocol: BLE [GAP, GATT, ATT, L2CAP]</li>
+                  <li>• Security: AES-128</li>
+                </ul>
+                
+                <div className="border-t border-white/10 pt-1 mt-1">
+                  <p className="text-poster-teal text-[9px]">Smart Lock</p>
+                  <ul className="text-poster-white/80 text-[8px] space-y-0.5">
+                    <li>• Hardware: Arduino [BLE, Servo Motor]</li>
+                    <li>• Security: AES-256, HMAC</li>
+                  </ul>
+                </div>
+                
+                <div className="border-t border-white/10 pt-1 mt-1">
+                  <p className="text-poster-teal text-[9px]">Door Bell</p>
+                  <ul className="text-poster-white/80 text-[8px] space-y-0.5">
+                    <li>• Hardware: RaspberryPi 4B+</li>
+                    <li>• Sensors: Camera v2, Ultrasonic, Buzzer, LED</li>
+                    <li>• Processing: YOLO (Ultralytics)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Arrow from Edge to Fog */}
-          <div className="z-20 flex items-center">
-            <div className="w-8 relative">
-              <div className="absolute top-1/2 left-0 w-8 flex flex-col items-center -translate-y-1/2">
-                <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
-                <div className="text-[8px] text-poster-teal mt-1">Raw Data</div>
-              </div>
+          {/* Arrow from Edge to Fog with animation and label */}
+          <div className="z-20 flex flex-col items-center">
+            <div className="w-12 flex flex-col items-center justify-center">
+              <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
+              <span className="text-[8px] text-poster-teal mt-1">Raw Data</span>
             </div>
           </div>
           
@@ -57,35 +64,25 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           <div className="flex flex-col items-center z-10">
             <div className="bg-poster-darkgray p-3 rounded-lg border border-white/10 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
-                Fog Layer
+                Fog Node
               </div>
-              <p className="text-poster-teal font-medium text-center mb-1">Processing & AI</p>
-              <ul className="text-poster-white text-xs space-y-1">
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Processing:</span>
-                  <span>TensorFlow Lite</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Protocol:</span>
-                  <span>Wi-Fi 6</span>
-                </li>
-              </ul>
-              
-              {/* Data Analytics */}
-              <div className="mt-2 pt-1 border-t border-white/10">
-                <p className="text-[10px] text-poster-teal mb-1">Analytics:</p>
-                <p className="text-[9px] text-poster-white/70">Classification, Anomaly detection</p>
+              <div className="space-y-1 text-xs">
+                <p className="text-poster-teal font-medium">Base Station</p>
+                <ul className="text-poster-white/80 text-[9px] space-y-0.5">
+                  <li>• Hardware: RaspberryPi 4B+</li>
+                  <li>• Protocol: WSS, HTTPS, BLE</li>
+                  <li>• Security: TLS, JWT, AES-256</li>
+                  <li>• Processing: Local image analysis</li>
+                </ul>
               </div>
             </div>
           </div>
           
-          {/* Arrow from Fog to Cloud */}
-          <div className="z-20 flex items-center">
-            <div className="w-8 relative">
-              <div className="absolute top-1/2 left-0 w-8 flex flex-col items-center -translate-y-1/2">
-                <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
-                <div className="text-[8px] text-poster-teal mt-1">Processed Data</div>
-              </div>
+          {/* Arrow from Fog to Cloud with animation and label */}
+          <div className="z-20 flex flex-col items-center">
+            <div className="w-12 flex flex-col items-center justify-center">
+              <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
+              <span className="text-[8px] text-poster-teal mt-1">Processed Data</span>
             </div>
           </div>
           
@@ -95,33 +92,21 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
                 Cloud Layer
               </div>
-              <p className="text-poster-teal font-medium text-center mb-1">Data Analytics</p>
-              <ul className="text-poster-white text-xs space-y-1">
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Platform:</span>
-                  <span>AWS IoT Core</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Protocol:</span>
-                  <span>MQTT</span>
-                </li>
-              </ul>
-              
-              {/* Data Storage */}
-              <div className="mt-2 pt-1 border-t border-white/10">
-                <p className="text-[10px] text-poster-teal mb-1">Processing:</p>
-                <p className="text-[9px] text-poster-white/70">Pattern analysis, ML training</p>
+              <div className="space-y-1 text-xs">
+                <p className="text-poster-teal font-medium">Platform: OpenShift</p>
+                <ul className="text-poster-white/80 text-[9px] space-y-0.5">
+                  <li>• Protocol: WSS, HTTPS</li>
+                  <li>• Security: TLS, AES-256, JWT</li>
+                </ul>
               </div>
             </div>
           </div>
           
-          {/* Arrow from Cloud to App */}
-          <div className="z-20 flex items-center">
-            <div className="w-8 relative">
-              <div className="absolute top-1/2 left-0 w-8 flex flex-col items-center -translate-y-1/2">
-                <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
-                <div className="text-[8px] text-poster-teal mt-1">Insights</div>
-              </div>
+          {/* Arrow from Cloud to App with animation and label */}
+          <div className="z-20 flex flex-col items-center">
+            <div className="w-12 flex flex-col items-center justify-center">
+              <ArrowRight className="w-6 h-6 text-poster-teal animate-pulse" />
+              <span className="text-[8px] text-poster-teal mt-1">Insights</span>
             </div>
           </div>
           
@@ -131,22 +116,13 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-poster-teal text-poster-background text-xs px-2 py-0.5 rounded-full">
                 Application Layer
               </div>
-              <p className="text-poster-teal font-medium text-center mb-1">Human Interaction</p>
-              <ul className="text-poster-white text-xs space-y-1">
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Platform:</span>
-                  <span>Python-Kivy</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-poster-spacegray mr-3">Security:</span>
-                  <span>Biometric</span>
-                </li>
-              </ul>
-              
-              {/* User Interaction */}
-              <div className="mt-2 pt-1 border-t border-white/10">
-                <p className="text-[10px] text-poster-teal mb-1">Features:</p>
-                <p className="text-[9px] text-poster-white/70">Monitoring, Alerts, Controls</p>
+              <div className="space-y-1 text-xs">
+                <p className="text-poster-teal font-medium">Kivy Mobile → Android</p>
+                <ul className="text-poster-white/80 text-[9px] space-y-0.5">
+                  <li>• UI: Kivymd, Kivyuix</li>
+                  <li>• Protocol: WSS, HTTPS, BLE, WebRTC</li>
+                  <li>• Security: TLS, OAuth, JWT, MFA, HMAC, DTLS</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -175,68 +151,30 @@ const TechnicalDeepDive = ({ className }: { className?: string }) => {
           </div>
         </div>
         
-        <div className="space-y-4 mt-2">
-          <div className="mt-4 space-y-2">
-            <h4 className="text-lg text-poster-white font-medium">Critical Design Decisions</h4>
-            <ul className="text-xs text-poster-white/80 grid grid-cols-2 gap-x-4 gap-y-2">
-              <li>• Edge processing minimizes cloud exposure</li>
-              <li>• Multi-layered security approach</li>
-              <li>• Modular architecture for component upgrades</li>
-              <li>• Human-centered design for intuitive controls</li>
+        {/* Security & Communication Overview */}
+        <div className="grid grid-cols-2 gap-4 mt-2">
+          <div className="bg-poster-darkgray/60 p-2 rounded-lg border border-white/5">
+            <div className="flex items-center mb-1">
+              <Lock className="w-4 h-4 text-poster-teal mr-2" />
+              <h5 className="text-sm text-poster-white font-medium">Security</h5>
+            </div>
+            <ul className="text-[9px] text-poster-white/70 space-y-0.5 pl-2">
+              <li>• End-to-end encryption (AES-256)</li>
+              <li>• TLS, JWT, OAuth, MFA</li>
+              <li>• DTLS for WebRTC</li>
             </ul>
           </div>
           
-          {/* Security & Privacy Techniques */}
-          <div className="grid grid-cols-2 gap-4 mt-4">
-            <div className="bg-poster-darkgray/60 p-3 rounded-lg border border-white/5">
-              <div className="flex items-center mb-1">
-                <Lock className="w-4 h-4 text-poster-teal mr-2" />
-                <h5 className="text-sm text-poster-white font-medium">Security</h5>
-              </div>
-              <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
-                <li>• Hardware security modules</li>
-                <li>• End-to-end encryption (AES-256)</li>
-                <li>• Certificate authentication</li>
-              </ul>
-            </div>
-            
-            <div className="bg-poster-darkgray/60 p-3 rounded-lg border border-white/5">
-              <div className="flex items-center mb-1">
-                <Cpu className="w-4 h-4 text-poster-teal mr-2" />
-                <h5 className="text-sm text-poster-white font-medium">Data Processing</h5>
-              </div>
-              <ul className="text-[10px] text-poster-white/70 space-y-0.5 pl-2">
-                <li>• On-device filtering</li>
-                <li>• Hybrid ML model architecture</li>
-                <li>• Privacy-preserving analytics</li>
-              </ul>
-            </div>
-          </div>
-          
-          {/* Network & Communication */}
-          <div className="mt-4">
+          <div className="bg-poster-darkgray/60 p-2 rounded-lg border border-white/5">
             <div className="flex items-center mb-1">
-              <Layers className="w-4 h-4 text-poster-teal mr-2" />
-              <h5 className="text-sm text-poster-white font-medium">Network Protocols</h5>
+              <Wifi className="w-4 h-4 text-poster-teal mr-2" />
+              <h5 className="text-sm text-poster-white font-medium">Communication</h5>
             </div>
-            <div className="grid grid-cols-4 gap-2">
-              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
-                <p className="text-[10px] text-poster-teal font-medium">BLE 5.0</p>
-                <p className="text-[8px] text-poster-white/70">Edge sensors</p>
-              </div>
-              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
-                <p className="text-[10px] text-poster-teal font-medium">Wi-Fi 6</p>
-                <p className="text-[8px] text-poster-white/70">Local network</p>
-              </div>
-              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
-                <p className="text-[10px] text-poster-teal font-medium">MQTT</p>
-                <p className="text-[8px] text-poster-white/70">Cloud messaging</p>
-              </div>
-              <div className="bg-poster-darkgray/40 p-1.5 rounded-lg text-center">
-                <p className="text-[10px] text-poster-teal font-medium">REST API</p>
-                <p className="text-[8px] text-poster-white/70">App integration</p>
-              </div>
-            </div>
+            <ul className="text-[9px] text-poster-white/70 space-y-0.5 pl-2">
+              <li>• BLE [GAP, GATT, ATT, L2CAP]</li>
+              <li>• WSS, HTTPS</li>
+              <li>• WebRTC [UDP + RTP]</li>
+            </ul>
           </div>
         </div>
       </div>
